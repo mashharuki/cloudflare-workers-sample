@@ -11,3 +11,9 @@ bun install
 ```bash
 bun run start
 ```
+
+## Cloudflareにデプロイ
+
+```bash
+bun run deploy
+```
