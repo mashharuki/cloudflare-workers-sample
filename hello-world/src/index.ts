@@ -14,6 +14,6 @@
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		// Hello Worldという文字列だけを返す
-		return new Response('Hello Worker!');
+		return new Response('Hello Worker!!!');
 	},
 } satisfies ExportedHandler<Env>;

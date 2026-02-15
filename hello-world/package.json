@@ -7,6 +7,7 @@
 		"dev": "wrangler dev",
 		"start": "wrangler dev",
 		"test": "vitest",
+		"delete": "wrangler delete",
 		"cf-typegen": "wrangler types"
 	},
 	"devDependencies": {
