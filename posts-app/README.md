@@ -1,10 +1,23 @@
 ```txt
-npm install
-npm run dev
+bun install
+bun run dev
+```
+
+D1城にデータベーススキーマを適用させる
+
+```bash
+bun run db:migrate
+```
+
+以下のようになればOK!
+
+```bash
+✅ Successfully created DB 'posts-app' in region APAC
+Created your new D1 database.
 ```
 
 ```txt
-npm run deploy
+bun run deploy
 ```
 
 [For generating/synchronizing types based on your Worker configuration run](https://developers.cloudflare.com/workers/wrangler/commands/#types):
