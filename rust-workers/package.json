@@ -1,0 +1,21 @@
+{
+  "name": "rust-workers",
+  "version": "1.0.0",
+  "description": "## ビルド",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+		"dev": "wrangler dev --env dev",
+    "start": "cargo run",
+    "build": "cargo build",
+		"test": "cargo test",
+		"delete": "wrangler delete",
+		"cf-typegen": "wrangler types"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "wrangler": "^4.65.0"
+  }
+}
