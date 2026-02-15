@@ -8,3 +8,7 @@ Content-Type: application/json
   "title": "My First Post",
   "body": "This is the content of my first post."
 }
+
+### 投稿文の一覧を取得するAPI
+GET {{base_url}}/posts
+Content-Type: application/json

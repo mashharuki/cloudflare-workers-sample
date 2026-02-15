@@ -6,7 +6,7 @@ bun run dev
 D1城にデータベーススキーマを適用させる
 
 ```bash
-bun run db:migrate
+bun run db:create
 ```
 
 以下のようになればOK!
@@ -14,6 +14,13 @@ bun run db:migrate
 ```bash
 ✅ Successfully created DB 'posts-app' in region APAC
 Created your new D1 database.
+```
+
+その後、ローカルとリモートで検証できるようにマイグレーションを実行させる
+
+```bash
+bun run db:migrate:local
+bun run db:migrate:remote
 ```
 
 ```txt

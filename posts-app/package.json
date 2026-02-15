@@ -7,7 +7,9 @@
     "preview": "wrangler pages dev",
     "deploy": "bun run build && wrangler pages deploy",
     "cf-typegen": "wrangler types --env-interface CloudflareBindings",
-    "db:migrate": "bunx wrangler d1 create posts-app"
+    "db:create": "bunx wrangler d1 create posts-app",
+    "db:migrate:local": "bunx wrangler d1 execute posts-app --local --file=./schema.sql", 
+    "db:migrate:remote": "bunx wrangler d1 execute posts-app --remote --file=./schema.sql"
   },
   "dependencies": {
     "@hono/zod-validator": "0.7.5",

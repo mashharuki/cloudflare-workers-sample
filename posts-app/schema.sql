@@ -4,5 +4,5 @@ DROP TABLE IF EXISTS posts;
 CREATE TABLE posts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT,
-    body TEXT,
+    body TEXT
 );

@@ -8,7 +8,7 @@
 	],
 	"d1_databases": [
 		{
-			"binding": "posts_app",
+			"binding": "DB",
 			"database_name": "posts-app",
 			"database_id": "1edfc53d-7e8f-450d-84dd-1618dabe2d78",
 			"remote": true

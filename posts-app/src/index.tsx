@@ -25,6 +25,7 @@ app.get('/', (c) => {
  * 投稿を取得する
  */
 app.get('/posts', async (c) => {
+  console.log(c.env.DB);
   // 投稿文を取得する
   const posts = await c.env.DB.prepare('SELECT * FROM posts').all<Post>();
 
