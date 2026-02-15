@@ -2,7 +2,7 @@ import { Hono } from 'hono'
 import { renderer } from './renderer'
 
 const app = new Hono()
-
+// rendererをミドルウェアとして登録
 app.use(renderer)
 
 app.get('/', (c) => {
