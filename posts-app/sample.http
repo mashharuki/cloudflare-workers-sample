@@ -1,0 +1,10 @@
+@base_url = http://localhost:5173
+
+### 投稿文を追加するAPI
+POST {{base_url}}/posts
+Content-Type: application/json
+
+{
+  "title": "My First Post",
+  "body": "This is the content of my first post."
+}
