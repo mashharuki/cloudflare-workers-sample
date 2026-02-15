@@ -7,5 +7,14 @@
   </head>
   <body>
       <h1>Hello Worker!!!</h1>
+      <h2 id="counter">counter</h2> 
+      <script type="module">
+        // counter.jsで定義したエンドポイントにリクエストを送る
+        const res = await fetch("/counter");
+        const result = await res.json();
+        // カウンターの値を表示する
+        const counter = document.getElementById("counter");
+        counter.textContent = `Count: ${result.count}`;
+      </script>
   </body>
 </html>

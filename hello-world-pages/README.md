@@ -6,10 +6,22 @@ To install dependencies:
 bun install
 ```
 
-To run:
+Pagesのデプロイ
 
 ```bash
-bun run index.ts
+bun run deploy
 ```
 
-This project was created using `bun init` in bun v1.1.4. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+KV namespeceを作成する
+
+```bash
+bunx wrangler kv namespace create hello_world_pages_counter
+```
+
+ここで発行された`binding`と`id`は`wrangler.jsonc`に記載して下さい。
+
+ローカルでCloudflare pageを検証する
+
+```bash
+bun run dev
+```

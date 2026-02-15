@@ -3,7 +3,8 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "deploy": "wrangler pages deploy ./public"
+    "deploy": "wrangler pages deploy ./public",
+    "dev": "wrangler pages dev --compatibility-date 2026-02-15 ./public"
   },
   "devDependencies": {
     "wrangler": "^4.65.0"

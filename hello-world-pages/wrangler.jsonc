@@ -1,0 +1,14 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"name": "hello-world-pages",
+	"compatibility_date": "2026-02-12",
+	"kv_namespaces": [
+		{
+			"binding": "hello_world_pages_counter",
+			"id": "cd41538cf3534b35a9f99cd8b02280ae"
+		}
+	]
+}
