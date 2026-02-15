@@ -6,3 +6,6 @@ cloudflare-workers-sample
 - [📖 Explore Documentation](https://developers.cloudflare.com/workers)
 - [🐛 Report an Issue](https://github.com/cloudflare/workers-sdk/issues/new/choose)
 - [💬 Join our Community](https://discord.cloudflare.com)
+- [Build an Interactive ChatGPT App](https://developers.cloudflare.com/agents/guides/chatgpt-app/)
+- [My first Cloudflare Workers AI](https://zenn.dev/yusukebe/articles/59532688053828)
+- [GitHub - my-first-workers-ai](https://github.com/yusukebe/my-first-workers-ai)
