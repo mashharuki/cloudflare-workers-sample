@@ -7,9 +7,17 @@ edition = "2024"
 crate-type = ["cdylib"]
 
 [dependencies]
-worker = "0.7.4"
+worker = { version = "0.7.4", features = ["http", "axum"]}
+axum = { version = "0.8.8", default-features = false }
+tower-service = "0.3.2"
+console_error_panic_hook = "0.1.7"
+wasm-bindgen = "0.2.108"
 
 [profile.release]
 opt-level = "s"
 lto = true
 codegen-units = 1
+
+[[bin]]
+name = "rust-workers"
+path = "src/main.rs"
