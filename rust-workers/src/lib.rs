@@ -1,20 +1,24 @@
+use axum::{response::IntoResponse, routing::get, Router};
+use tower_service::Service;
 use worker::*;
 
 // ルートハンドラー
-fn root_handler(
-    _req: worker::Request, 
-    _ctx: RouteContext<()>
-) -> worker::Result<worker::Response> {
-    // "Hello World!" を返す
-    Response::ok("Hello World!")
+fn router() -> Router {
+    Router::new().route("/", get(root))
 }
 
 // エントリーポイントとなるメイン関数
 #[event(fetch)]
-async fn main(_req: Request, _env: Env, _ctx: Context) -> Result<Response> {
-    // ルーターの設定
-    let router = Router::new();
+async fn fetch(
+    _req: HttpRequest,
+    _env: Env,
+    _ctx: Context,
+) -> Result<axum::http::Response<axum::body::Body>> {
+   Ok(router().call(_req).await?)
+}
 
-    // ルーティングの設定
-    router.get("/", root_handler).run(_req, _env).await
+
+#[worker::send]
+pub async fn root() -> impl IntoResponse {
+    "Hello, World!"
 }
