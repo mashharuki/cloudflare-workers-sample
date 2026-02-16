@@ -1,0 +1,17 @@
+{
+	"name": "slack-bot",
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"delete": "wrangler delete",
+		"cf-typegen": "wrangler types --env-interface CloudflareBindings"
+	},
+	"dependencies": {
+		"hono": "^4.11.9"
+	},
+	"devDependencies": {
+		"@types/node": "^25.2.3",
+		"wrangler": "^4.65.0"
+	}
+}
