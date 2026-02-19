@@ -1,0 +1,31 @@
+{
+  "name": "todo-app",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "bun run build && source .env && wrangler pages deploy",
+    "delete": "wrangler pages project delete",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "0.7.5",
+    "@neondatabase/serverless": "latest",
+    "drizzle-orm": "latest",
+    "hono": "^4.11.9",
+    "zod": "4.0.0"
+  },
+  "devDependencies": {
+    "@hono/vite-build": "^1.2.0",
+    "@hono/vite-dev-server": "^0.18.2",
+    "@types/node": "^25.2.3",
+    "dotenv": "latest",
+    "drizzle-kit": "latest",
+    "vite": "^6.3.5",
+    "wrangler": "^4.4.0"
+  }
+}
